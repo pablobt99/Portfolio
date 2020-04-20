@@ -127,3 +127,13 @@ select{
   color: #ff6f47;
   transform:rotateZ(180deg);
 }
+.git-button{
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  color: white;
+  margin: 0 20px;
+}
+.git-a{
+  color: white;
+}
