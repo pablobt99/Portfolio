@@ -122,7 +122,7 @@ select{
   transition: all 0.6s ease;
 }
 
-.select:hover::after{
+.select-pressed::after{
   background: white;
   color: #ff6f47;
   transform:rotateZ(180deg);
@@ -137,4 +137,3 @@ select{
 .git-a{
   color: white;
 }
- 
