@@ -116,6 +116,7 @@ select{
     font-size: 1.5rem;
     margin: 2rem;
     text-align: center;
+    padding-bottom: 2rem;
   }
 
 @keyframes playTrack {
@@ -124,5 +125,44 @@ select{
     }
     to {
       transform: scale(1.2);
+    }
+  }
+  .git-button{
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    color: white;
+    margin: 0 20px;
+  }
+  .git-a{
+    color: white;
+  }
+  footer{
+    background-color: black !important;
+    align-items: center;
+    position: fixed;
+      bottom: 0;
+      width: 100%;
+  }
+  footer p{
+    margin: 20px 0 20px 0;
+    font-size: 20px;
+    color: white;
+  }
+  .footer{
+    text-align: center !important;
+  }
+  .footer button :hover{
+    animation-name: spinHover;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+  
+  }
+  @keyframes spinHover {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
     }
   }
