@@ -223,3 +223,10 @@
     background: rgb(41, 41, 41);
     color: white;
   }
+  footer{
+    background-color: black !important;
+    align-items: center;
+  }
+  .footer{
+    text-align: center !important;
+  }

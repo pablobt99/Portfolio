@@ -137,3 +137,31 @@ select{
 .git-a{
   color: white;
 }
+footer{
+  background-color: black !important;
+  align-items: center;
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+  margin: 20px 0 20px 0;
+  font-size: 20px;
+}
+.footer{
+  text-align: center !important;
+}
+.footer button :hover{
+  animation-name: spinHover;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+
+}
+@keyframes spinHover {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
