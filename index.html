@@ -1,60 +1,126 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Todo List</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-
-    <header>
-      
-      <h1>Pablo's Todo List</h1>
-      
+  <body data-barba="wrapper">
+    <header class="nav-header">
+      <h1><a href="./index.html" id="logo">proyects.</a></h1>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+      </div>
     </header>
-    
-    <form class="" action="index.html" method="post">
-      <input type="text" name="" value="" class="todo-input">
-      <button class="todo-button" type="submit" href="#">
-        <i class="fas fa-plus-square"></i>
-      </button>
-      <div class="select">
-        <select name="todos" class="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="pending">Pending</option>
-        </select>
+    <main data-barba="container" data-barba-namespace="home">
+      <section class="mountain slide">
+        <div class="hero-img">
+          <img src="./img/colors-2.png" alt="forest image" />
+          <div class="reveal-img"></div>
+        </div>
+        <div class="hero-desc">
+          <div class="title">
+            <h2>
+              Colors <span class="mountain-span">Palete.</span>
+            </h2>
+            <div class="title-swipe t-swipe1"></div>
+          </div>
+          <p>
+            With the colors palete select and save for later use a color palete that you like
+          </p>
+          <a class="explore mountain-exp" href="https://pablobt99.github.io/js/Colors/colors.html">Try it!</a>
+          <div class="reveal-text"></div>
+        </div>
+        <div class='icon-scroll'></div>
+      </section>
+      <section class="hike slide">
+        <div class="hero-img">
+          <img src="./img/Beat.png" alt="hike image" />
+          <div class="reveal-img"></div>
+        </div>
+        <div class="hero-desc">
+          <div class="title">
+            <h2>Beat <span class="hike-span">Maker.</span></h2>
+            <div class="title-swipe t-swipe2"></div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+            asperiores ad laboriosam iure rem. Voluptates pariatur quo iusto non
+            deleniti.
+          </p>
+          <a class="explore hike-exp" href="https://pablobt99.github.io/js/Beats/beats.html">Try it!</a>
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+      <section class="fashion slide">
+        <div class="hero-img">
+          <img src="./img/TodoImg.png" alt="fashion image" />
+          <div class="reveal-img"></div>
+        </div>
+        <div class="hero-desc">
+          <div class="title">
+            <h2>
+              To do <span class="fashion-span">List.</span>
+            </h2>
+            <div class="title-swipe t-swipe3"></div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+            asperiores ad laboriosam iure rem. Voluptates pariatur quo iusto non
+            deleniti.
+          </p>
+          <a href="https://pablobt99.github.io/js/To-Do/Todo.html" class="explore fashion-exp">Try it!</a>
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+    </main>
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <h3>Twitter</h3>
+        <h3>Youtube</h3>
+        <h3>Instragram</h3>
+      </ul>
+      <div class="contact">
+        <h2>Stay in touch.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem
+          praesentium ea amet error quidem natus. Magnam explicabo sed tenetur?
+        </p>
       </div>
-    </form>
-    <div class="todo-container">
-      <ul class="todo-list"></ul>
+    </nav>
+    <div class="cursor">
+      <span class="cursor-text"></span>
     </div>
-    <div class="copy-container">
-    <div class="save-container">
-      <div class="save-popup">
-        <button class="close-save">X</button>
-        <h4>Give a name to your List</h4>
-        <input type="text" max-length="35" class="save-name" />
-        <button type="submit" class="submit-save">Save</button>
-      </div>
-    </div>
-  </div>
-    <footer>
-      <div class="footer">
-        <p>Other Proyects:</p>
-        
-        <button type="button" name="button" class="git-button"><a href="Colors/colors.html" target="_blank" class="git-a"><i class="fas fa-palette"></i></a></button>
-        <button type="button" name="button" class="git-button"><a href="Beats/beats.html" class="git-a"><i class="fas fa-compact-disc"></i></a></button>
-        <button type="button" name="button" class="git-button"><a href="https://github.com/pablobt99/js" target="_blank" class="git-a"><i class="fab fa-github"></i></a></button>
-        <button type="button" name="button" class="git-button"><a href="https://github.com/pablobt99/js" target="_blank" class="git-a"><i class="fas fa-globe"></i></a></button>
-      </div>
-    </footer>
-
-
-
-
-    <script src="app.js"></script>
+    <div class="swipe swipe1"></div>
+    <div class="swipe swipe2"></div>
+    <div class="swipe swipe3"></div>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"
+      integrity="sha256-XBVALc3QsDSQiDtiaBwNZ2rxCJTHzlUhhlDQ84J8bw8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+      integrity="sha256-+9YNuItWuR4sbqeaNiJOxG0BvptYz4fbUXbIZoH5Jwo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"
+      integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
   </body>
 </html>
