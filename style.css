@@ -1,225 +1,405 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: 0;
-}
-
-body{
-    background-image: linear-gradient(120deg,#e2c35d,#d88771); /*gradionte tipo instagram*/
-    color: white;
-    font-family: 'Poppins',sans-serif;
-    min-height: 100vh;
-}
-header{
-  font-size: 1.5rem;
-}
-
-header,form{
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-form input, form button{
-  padding: 0.5rem;
-  font-size: 2rem;
-  border: none;
-  background: white;
-
-}
-
-form button{
-  color: #d88771;
-  background: white;
-  cursor: pointer;
-  transition:  all 0.7s ease;
-}
-
-form button:hover{
-  background: #d88771;
-  color: white;
-}
-ul{
-  list-style: none;
-}
-
-.todo-container{
-  display:flex;
-  justify-content: center;
-  align-items:center;
-}
-
-.todo{
-  margin: 0.5rem;
-  background: white;
-  color: black;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: sapace-between;
-  align-items: center;
-  min-width: 30rem;
-  transition: all 0.6s ease;
-}
-
-.todo li{
-  flex:1;
-}
-.trash-btn,
-.complete-btn{
-  background: #ff6f47;
-  color: white;
-  border: none;
-  padding: 1.16rem;
-  cursor: pointer;
-  font-size: 1rem;
-}
-.complete-btn{
-  background: rgb(73,204,73);
-}
-.todo-item{
-  padding: 0 1rem;
-}
-.fa-trash,
-.fa-check{
-  pointer-events: none;
-}
-.completed{
-  text-decoration: line-through;
-  opacity: 0.5;
-}
-.fall{
-  transform:translateY(8rem) rotateZ(360deg);
-  opacity: 0;
-}
-select{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-    appearance: none;
-    border: none;
-}
-
-.select{
-  margin: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-select{
-  color: #ff6f47;
-  width: 10rem;
-  cursor: pointer;
-  padding: 1.16rem;
-  background-color: white;
-}
-.select::after{
-  content: "\25BC";
-  position: absolute;
-  background: #ff6f47;
-  top:0;
-  right: 0;
-  padding: 1rem;
-  pointer-events: none;
-  transition: all 0.6s ease;
-}
-
-.select-pressed::after{
-  background: white;
-  color: #ff6f47;
-  transform:rotateZ(180deg);
-}
-.git-button{
-  background: transparent;
-  border: none;
-  font-size: 40px;
-  color: white;
-  margin: 0 20px;
-}
-.git-a{
-  color: white;
-}
-footer{
-  background-color: black !important;
-  align-items: center;
-  position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-footer p{
-  margin: 20px 0 20px 0;
-  font-size: 20px;
-}
-.footer{
-  text-align: center !important;
-}
-.footer button :hover{
-  animation-name: spinHover;
-  animation-duration: 1000ms;
-  animation-iteration-count: 1;
-
-}
-@keyframes spinHover {
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-  }
-}
-  .save-container{
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    transition: all 0.5s ease-in-out;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-  }
- 
-.save-popup{
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 2rem;
-    transition: transform 0.5s ease;
-    transform: translateY(-2rem);
-    min-width: 30%;
-    min-height: 30vh;
-  }
-
-  .save-popup h4{
-    font-size: 2rem;
-    padding: 2rem;
-  }
-  .save-container.active{
-    opacity: 1;
-    pointer-events: all;
-  }
-  .save-popup.active{
-    transform: translateY(0rem);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  .save-name {
-    font-size: 1.5rem;
-    padding: 1rem;
+  body {
+    background: #17181a;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    position: relative;
   }
-  .close-save {
-    border-top-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    padding: 0.5rem;
+  main {
+    position: absolute;
   }
-  .submit-save {
-    margin: 2rem;
-    padding: 1rem 3rem;
-    background: rgb(60, 60, 92);
-    border: none;
-    border-radius: 10px;
+  
+  #logo {
     color: white;
+    font-family: "Abril Fatface";
+  }
+  .nav-header {
+    min-height: 10vh;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0rem;
+    z-index: 2;
+    position: relative;
+  }
+  .line1,
+  .line2 {
+    width: 3rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: white;
+    pointer-events: none;
+  }
+  
+  .slide {
+    min-height: 100vh;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background: #17181a;
+  }
+  
+  .hero-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-basis: 25rem;
+    padding-left: 5rem;
+    position: relative;
+  }
+  .hero-img {
+    position: relative;
+    flex: 1;
+    flex-basis: 25rem;
+    overflow: hidden;
+  }
+  
+  .hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .fashion-span {
+    color: rgb(255, 139, 93);
+  }
+  .mountain-span {
+    color: rgb(86, 124, 228);
+  }
+  
+  .hike-span {
+    color: rgb(167, 110, 231);
+  }
+  .hero-desc h2 {
+    font-family: "Abril Fatface";
+    font-size: 5rem;
+  }
+  .hero-desc p {
+    padding: 3rem 0rem;
+    font-size: 1.5rem;
+    color: rgb(223, 223, 223);
+  }
+  .explore {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    color: white;
+    border: 1px solid white;
+    font-size: 1rem;
+    text-decoration: none;
+    align-self: flex-start;
     cursor: pointer;
+  }
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    clip-path: circle(50px at 100% -10%);
+    -webkit-clip-path: circle(50px at 100% -10%);
+  }
+  .burger {
+    cursor: pointer;
+  }
+  .nav-links {
+    font-size: 3rem;
+    flex-basis: 30rem;
+  }
+  .nav-links h3 {
+    padding: 3rem 0rem;
+  }
+  .contact {
+    flex-basis: 30rem;
+  }
+  .contact h2 {
+    font-size: 3rem;
+    padding: 2rem 0rem;
+  }
+  .contact p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .reveal-img,
+  .reveal-text {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    background: #17181a;
+    left: 0;
+    top: -15%;
+  }
+  
+  .cursor {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    transition-property: background, transform;
+    transform-origin: 75% 75%;
+  }
+  .cursor.nav-active {
+    background: rgb(86, 124, 228);
+    transform: scale(3);
+  }
+  .cursor.explore-active {
+    background: white;
+    transform: scale(3);
+  }
+  .cursor-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 0.5rem;
+    transform: translate(-50%, -50%);
+  }
+  .title {
+    position: relative;
+    overflow: hidden;
+  }
+  .title-swipe {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    mix-blend-mode: darken;
+    transform: translateY(100%);
+  }
+  .t-swipe1 {
+    background: rgb(86, 124, 228);
+  }
+  .t-swipe2 {
+    background: rgb(167, 110, 231);
+  }
+  .t-swipe3 {
+    background: rgb(255, 139, 93);
+  }
+  
+  .scrollmagic-pin-spacer {
+    position: static !important;
+  }
+  body.hide {
+    overflow: hidden;
+  }
+  
+  /* Other Pages */
+  .fashion1,
+  .fashion2,
+  .fashion3 {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    color: white;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .fashion-img {
+    height: 70vh;
+    flex-basis: 30rem;
+  }
+  .fashion-text {
+    flex: 1;
+    position: relative;
+    flex-basis: 25rem;
+  }
+  .fashion-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .fashion-text h1 {
+    font-size: 6rem;
+    padding: 5rem 0rem;
+  }
+  
+  .fashion1 h1 {
+    color: rgb(255, 139, 93);
+  }
+  .fashion2 h1 {
+    color: rgb(167, 110, 231);
+  }
+  .fashion3 h1 {
+    color: rgb(86, 124, 228);
+  }
+  
+  .fashion-text p {
+    font-size: 2rem;
+    padding: 2rem 2rem 0rem 0rem;
+    margin-bottom: 10rem;
+  }
+  .fashion-nr {
+    font-size: 15rem;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    color: white;
+    opacity: 0.2;
+  }
+  
+  .swipe {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+  }
+  .swipe1 {
+    background: rgb(167, 110, 231);
+    z-index: 5;
+  }
+  .swipe2 {
+    background: rgb(86, 124, 228);
+    z-index: 4;
+  }
+  .swipe3 {
+    background: rgb(255, 139, 93);
+    z-index: 3;
+  }
+  
+  @media screen and (max-width: 1500px) {
+    .hero-img {
+      height: 50vh;
+    }
+    .fashion-text h1 {
+      font-size: 2rem;
+      padding: 1rem 0rem;
+    }
+    .fashion-text p {
+      font-size: 1.2rem;
+    }
+    .fashion-img img {
+      height: 50vh;
+      object-position: top;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    main {
+      width: 100%;
+      margin: 0;
+    }
+    .slide {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .hero-desc {
+      padding: 0;
+    }
+    .hero-img {
+      padding-top: 4rem;
+    }
+    .hero-desc h2 {
+      font-size: 1.6rem;
+      padding: 1rem 0rem;
+    }
+    .hero-desc p {
+      padding: 2rem 1rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+    .explore {
+      width: 60%;
+      margin: auto;
+    }
+    .detail-slide {
+      width: 100%;
+      text-align: center;
+    }
+    .fashion-text p {
+      margin-bottom: 5rem;
+      padding: 0;
+    }
+    .fastion-text h1 {
+      margin: 2rem 0rem;
+    }
+    .fashion-nr {
+      font-size: 8rem;
+    }
+    .nav-bar {
+      display: block;
+    }
+    .nav-links {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 3rem;
+      text-align: center;
+    }
+    .contact p {
+      font-size: 1.2rem;
+      padding: 2rem;
+      text-align: center;
+    }
+  }
+
+  .icon-scroll,
+  .icon-scroll:before{
+    position: absolute;
+    left: 51%;
+    
+  }
+  .icon-scroll{
+    width: 20px;
+    height: 35px;
+    margin-left: -20px;
+    top: 87%;
+    margin-top: -35px;
+    box-shadow: inset 0 0 0 1px #fff;
+    border-radius: 25px;
+  }
+  .icon-scroll:before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+  }
+  @keyframes scroll{
+    from{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+      transform: translateY(20px);
+    }
   }
