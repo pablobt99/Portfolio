@@ -21,3 +21,4 @@ function change(){
         this.classList.replace("black","white");
     }
 }
+
