@@ -1,0 +1,129 @@
+
+body{
+    background: rgb(2,0,36);
+    /*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    */
+    color: white;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #102eff, #d2379b);
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+}
+h1{
+    
+        position: fixed; /* or absolute */
+        top: 35%;
+        left: 35.5%;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        color: white;
+        padding: 100px 100px;
+        cursor: pointer !important;
+      
+}
+@keyframes spinHover {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+h1:hover{
+    animation-name: spinHover !important;
+    animation-duration: 1000ms !important;
+    animation-iteration-count: 1 !important;
+}
+li{
+    margin: 20px 100px;
+    font-weight: bold;
+}
+li, a{
+    font-size: 30px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white !important;
+}
+a:hover{
+    border-bottom: rgba(255, 255, 255, 0.5) solid 5px;
+}
+.active{
+    border-bottom: rgba(255, 255, 255, 0.5) solid 5px;
+}
+img{
+    height: 100px;
+}
+.spin{
+    animation-name: spinHover !important;
+    animation-duration: 1000ms !important;
+    animation-iteration-count: 1 !important;
+}
+.text-align-center{
+    text-align: center;
+}
+.margin-top{
+    margin-top: 100px !important; 
+}
+h5{
+    color: white;
+    margin: 10px 0 40px 0 !important;
+}
+.col-4:hover{
+
+}
+/*
+ul, li{
+    display: inline;
+}
+*/
+section{
+    
+}
+.game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+  }
+  
+  .card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 80px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 20px 20px 1px rgba(0,0,0,.2);
+    transition: all .5s;
+    background-color: transparent !important;
+    animation-name: spinHover !important;
+    animation-duration: 1000ms !important;
+    animation-iteration-count: 1 !important; 
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 25px 25px 1px rgba(0,0,0,.1);
+    }
+
+  
+  .card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    transform: rotateY(180deg);
+  }
+  .ulstyles{
+    text-align: center;
+  }
